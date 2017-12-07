@@ -1,4 +1,15 @@
 <h1>Battle!</h1>
 
-<h2><%="#{@player1} vs. #{@player2}"%></h2>
-<h2><%="Points: #{@hitpoints}"%></h2>
+<h2><%="#{@player1.name} vs. #{@player2.name}"%></h2>
+
+<h2><%="#{@player1.name} hitpoints: #{@player1.hitpoints}"%></h2>
+
+<form action="/attack" method="get">
+  <button>Attack <%= @player2.name %>!</button>
+</form>
+
+<h2><%="#{@player2.name} hitpoints: #{@player2.hitpoints}"%></h2>
+
+<form action="/attack" method="get">
+  <button>Attack <%= @player1.name %>!</button>
+</form>
