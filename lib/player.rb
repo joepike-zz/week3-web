@@ -1,15 +1,17 @@
 
 class Player
 
+  STARTING_HP = 100
+
   attr_accessor :name, :hitpoints
 
-  def initialize(name, hitpoints = 100)
+  def initialize(name, hitpoints = STARTING_HP )
     @name = name
     @hitpoints = hitpoints
   end
 
   def receive_damage
-    player.hitpoints -= 10
+    @hitpoints -= 10
   end
 
 end

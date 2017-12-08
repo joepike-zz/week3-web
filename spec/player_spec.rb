@@ -9,6 +9,8 @@ describe Player do
     expect(player.name).to eq "Bob"
   end
 
-  
+  it "should receive damage and deduct 10 from the hitpoints" do
+    expect{ player.receive_damage }.to change{ player.hitpoints }.by(-10)
+  end
 
 end
