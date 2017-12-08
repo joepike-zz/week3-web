@@ -1,15 +1,10 @@
 <h1>Battle!</h1>
 
-<h2><%="#{@player1} vs. #{@player2}"%></h2>
+<h2><%=@game.player_1.name%> vs. <%=@game.player_2.name%></h2>
 
-<h2><%="#{@player1} hitpoints: #{@hp_player1}"%></h2>
+<h2><%="#{@game.player_1.name} hitpoints: #{Player::STARTING_HP}"%></h2>
+<h2><%="#{@game.player_2.name} hitpoints: #{Player::STARTING_HP}"%></h2>
 
-<form action="/attack" method="get">
-  <button>Attack <%= @player2 %>!</button>
-</form>
-
-<h2><%="#{@player2} hitpoints: #{@hp_player2}"%></h2>
-
-<form action="/attack" method="get">
-  <button>Attack <%= @player1 %>!</button>
+<form action="/attack">
+  <input type="submit" value="Attack">
 </form>

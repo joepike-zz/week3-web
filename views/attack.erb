@@ -1,2 +1,5 @@
 
-<h2><%="#{@player1} attacked #{@player2}! #{@player2} hitpoints: #{@hp_player2}"%></h2>
+<h2>Battle page</h2>
+<h2><%=@game.player_1.name%> attacked <%=@game.player_2.name%>!</h2>
+<h2><%="#{@game.player_1.name} hitpoints: #{@game.player_1.hitpoints}"%></h2>
+<h2><%="#{@game.player_2.name} hitpoints: #{@game.player_2.hitpoints}"%></h2>

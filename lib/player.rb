@@ -1,7 +1,7 @@
 
 class Player
 
-  STARTING_HP = 100
+  STARTING_HP = 50
 
   attr_accessor :name, :hitpoints
 
